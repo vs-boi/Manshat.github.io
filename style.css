@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: darkslategray;
+    font-family: "Ubuntu", sans-serif;
+    color: aliceblue;
+    font-size: 16px;
+  }
+  
+  .header {
+    height: auto;
+    width: 100%;
+    background-color: rgb(28, 26, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .namecontainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .name, .lastname {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+  }
+  
+  .name {
+    color: rgb(220, 20, 83);
+  }
+  
+  .lastname {
+    color: rgb(186, 165, 12);
+    margin-left: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-family: 'Smooch Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ea474f;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #e8d773;
+    box-shadow: 0px 4px 8px rgba(232, 215, 115, 0.5);
+  }
+  
+  .middle-body {
+    padding: 40px;
+  }
+  
+  .content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .image-container {
+    flex: 0 0 250px;
+  }
+  
+  .profile-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .text-container {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .text {
+    color: rgb(232, 221, 8);
+    font-family: "Quicksand", sans-serif;
+    font-size: xx-large;
+    margin-bottom: 20px;
+  }
+  
+  .text2 {
+    color: aliceblue;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.6;
+  }
+  
+  .cursor {
+    display: inline-block;
+    font-weight: bold;
+    animation: blink 0.8s infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .namecontainer {
+      flex-direction: column;
+    }
+  
+    .content-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .text-container {
+      padding: 0 10px;
+    }
+  
+    .text {
+      font-size: 1.5em;
+    }
+  
+    .text2 {
+      font-size: 1em;
+    }
+  
+    .name, .lastname {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  

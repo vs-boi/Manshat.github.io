@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yearly Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #counter {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yearly Counter</h1>
+    <p>Current Year-Based Number:</p>
+    <div id="counter"></div>
+
+    <script>
+        const startYear = 2012; // Change this to the starting year
+        const startValue = 0; // Initial number in the starting year
+
+        function updateCounter() {
+            const currentYear = new Date().getFullYear();
+            const yearDifference = currentYear - startYear;
+            const updatedValue = startValue + yearDifference;
+            document.getElementById("counter").innerText = updatedValue;
+        }
+
+        updateCounter();
+    </script>
+</body>
+</html>
